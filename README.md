@@ -107,7 +107,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 ## 📂 Estrutura do Projeto
 
-```
+AQUI NÃO TEM NADA
 
 ## 🧠 Da Versão C ao Web: Processo de Evolução
 
@@ -143,6 +143,7 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 Para dúvidas ou sugestões, entre em contato com a equipe de desenvolvimento.
 
 ---
+
 **Nota:** Este projeto foi gerador por vibe coding [André Lopes](https://github.com/agenciadigitalslz).
 
 **Nota Educacional:** Este projeto foi gerado por lovable.dev para fins educativos e não sofreu alterações em seu código gerado original. O projeto foi criado com base em uma atividade acadêmica de Linguagem de Programação em C, transformando o Sistema de Vendas original em uma aplicação web moderna com interface gráfica.
