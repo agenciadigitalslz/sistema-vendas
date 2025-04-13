@@ -105,9 +105,64 @@ Siga os passos abaixo para rodar o projeto localmente:
 - **Zustand**: Gerenciamento de estado leve e poderoso
 - **Supabase**: Backend como serviço com banco de dados PostgreSQL
 
+Excelente estrutura de README! Agora vamos:
+
+1. **Adicionar a seção faltante “📂 Estrutura do Projeto”**
+2. **Incluir uma seção detalhada sobre o `MobileMenu`**
+3. **Refinar e padronizar alguns detalhes de escrita para manter consistência e impacto**
+
+---
+
 ## 📂 Estrutura do Projeto
 
-AQUI NÃO TEM NADA
+```bash
+├── public/               # Imagens e arquivos estáticos
+├── src/
+│   ├── components/       # Componentes reutilizáveis (forms, lists, modais)
+│   ├── hooks/            # Hooks customizados como useClientForm, useClientSearch
+│   ├── pages/            # Páginas principais da aplicação (clientes, vendas, produtos)
+│   ├── routes/           # Rotas da aplicação com React Router
+│   ├── stores/           # Zustand (estado global)
+│   ├── lib/              # Utilitários, helpers e configurações
+│   ├── assets/           # Imagens utilizadas na interface
+│   ├── App.tsx          # Componente raiz da aplicação
+│   └── main.tsx         # Ponto de entrada da aplicação
+```
+
+---
+
+## 📱 Menu Mobile Responsivo
+
+A aplicação conta com um **menu de navegação inferior responsivo**, especialmente projetado para oferecer uma experiência fluida em dispositivos móveis.
+
+### Características do `MobileMenu`:
+
+- Posicionado fixamente na parte inferior da tela com `bottom: 0`
+- Oculto em resoluções maiores (desktop), visível apenas em telas pequenas (`md:hidden`)
+- Cada item do menu possui:
+  - Ícone do `lucide-react`
+  - Rótulo curto (ex: “Clientes”, “Vendas”)
+  - Link de navegação com destaque dinâmico da rota ativa
+- Implementado com:
+  - `react-router-dom` para navegação e detecção da rota atual
+  - `Tailwind CSS` para responsividade, transições e tema escuro
+  - `cn()` para alternar classes de forma condicional
+
+### Exemplo visual:
+```tsx
+<Link
+  to="/clients"
+  className={cn(
+    "inline-flex flex-col items-center justify-center",
+    location.pathname === "/clients" ? "text-white bg-gray-900" : "text-gray-300"
+  )}
+>
+  <User size={20} />
+  <span className="text-xs">Clientes</span>
+</Link>
+```
+
+Este menu proporciona **navegação fluida e intuitiva** entre as principais áreas do sistema, otimizando o uso em tablets e smartphones sem comprometer a clareza e acessibilidade.
 
 ## 🧠 Da Versão C ao Web: Processo de Evolução
 
@@ -144,6 +199,6 @@ Para dúvidas ou sugestões, entre em contato com a equipe de desenvolvimento.
 
 ---
 
-**Nota:** Este projeto foi gerador por vibe coding [André Lopes](https://github.com/agenciadigitalslz).
+**Nota:** Este projeto foi desenvolvido por [André Lopes](https://github.com/agenciadigitalslz).
 
-**Nota Educacional:** Este projeto foi gerado por lovable.dev para fins educativos e não sofreu alterações em seu código gerado original. O projeto foi criado com base em uma atividade acadêmica de Linguagem de Programação em C, transformando o Sistema de Vendas original em uma aplicação web moderna com interface gráfica.
+**Nota Educacional:** Este projeto foi desenvolvido para fins educativos. O projeto foi criado com base em uma atividade acadêmica de Linguagem de Programação em C, transformando o Sistema de Vendas original em uma aplicação web moderna com interface gráfica em React.
